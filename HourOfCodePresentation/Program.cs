@@ -49,21 +49,25 @@ namespace HourOfCodePresentation
 
             while (k.Key != ConsoleKey.Escape)
             {
-                // Navigate Menu Up
-                if (k.Key == ConsoleKey.UpArrow)
+                switch(k.Key)
                 {
-                    if (currentPos != 0)
-                    {
-                        currentPos--;
-                    }
-                }
-                // Navigate Menu Down
-                else if (k.Key == ConsoleKey.DownArrow)
-                {
-                    if (currentPos < options.Length - 1)
-                    {
-                        currentPos++;
-                    }
+                    // Navigate Up
+                    case ConsoleKey.UpArrow:
+                        if (currentPos != 0)
+                        {
+                            currentPos--;
+                        }
+                        
+                        break;
+                        
+                    // Navigate Down
+                    case ConsoleKey.DownArrow:
+                        if (currentPos < options.Length - 1)
+                        {
+                            currentPos++;
+                        }
+                        
+                        break;
                 }
 
                 DrawMenu();
