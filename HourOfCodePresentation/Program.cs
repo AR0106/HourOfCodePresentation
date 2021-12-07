@@ -65,6 +65,11 @@ namespace HourOfCodePresentation
                         currentPos++;
                     }
                 }
+                // Select Option
+                else if (k.Key == ConsoleKey.Select)
+                {
+
+                }
 
                 DrawMenu();
 
